@@ -2,6 +2,9 @@
 A repository of information and source files for toolflow-supported hardware
 
 # FPGA Hardware Platforms
+
+![FPGA Hardware Matrix](https://github.com/casper-astro/casper-hardware/raw/master/FPGA_Hosts/hw-matrix.png)
+
 ## Custom Boards
 
 [IBOB](https://github.com/casper-astro/casper-hardware/wiki/IBOB)
