@@ -9,13 +9,15 @@ A repository of information and source files for toolflow-supported hardware
 
 ## SKARAB hardware configurations available
 
-## Toolflow supported hardware configuration:
+## Toolflow supported hardware configurations:
 
-The following configuration is supported by the toolflow:
+The following configurations are supported by the toolflow:
 
-![Toolflow Supported Architecture](https://github.com/casper-astro/casper-hardware/raw/master/FPGA_Hosts/skarab-toolflow-supported-architecture.png)
+![Toolflow Supported Architecture A](https://github.com/casper-astro/casper-hardware/raw/master/FPGA_Hosts/skarab-toolflow-supported-architecture.png)
 
-There is no yellow block for the ADC Mezzanine Card currently.The 40GbE yellow block only supports a single Tx/Rx link (port 0) and can only be fitted to Mez3 – firmware limitation due to SKA-SA BSP being integrated with 40GbE yellow block. The HMC Mezzanine cards can be placed on Mez0, Mez1, Mez2, but not Mez3.
+![Toolflow Supported Architecture B](https://github.com/casper-astro/casper-hardware/raw/master/FPGA_Hosts/skarab-toolflow-supported-architecture-adc-1-40gbe-link.png)
+
+The 40GbE yellow block only supports a single Tx/Rx link (port 0) and can only be fitted to Mez3 – firmware limitation due to SKA-SA BSP being integrated with 40GbE yellow block (work is being done to support multiple ports). The HMC and ADC Mezzanine cards can be placed on Mez0, Mez1, Mez2, but not Mez3.
 
 ## Non-Toolflow supported hardware configurations:
 
@@ -29,7 +31,7 @@ The hardware can support the following configurations of Mezzanine Cards (not sh
 
 1) 40GbE Mezzanine Cards (4 ports) x 4 
 2) HMC Mezzanine Cards, 4GB, 2 link x 4
-3) ADC Mezzanine Cards, 3GSPS, 14 bits, JESD204B, 4 channels x 4 (TBC due to external I/O needed from SKARAB Motherboard – it can definitely handle 1 board)
+3) ADC Mezzanine Cards, 3GSPS, 14 bits, JESD204B, 4 channels x 4
 
 ## Custom Boards
 
