@@ -1,6 +1,6 @@
 # BEE2
 
-![thumb | BEE2 v1.0](photos/bee2.jpg)
+![thumb | BEE2 v1.0](photos/Bee2.jpg)
 
 The BEE2 (**B**erkeley **E**mulation **E**gine) is the current CASPER
 workhorse signal processing platform.

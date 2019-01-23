@@ -29,6 +29,6 @@ assembled\! Pending testing by the Institute of Automation, one of these
 will be sent to Berkeley for integration into the CASPER toolflow.
 Photos below...
 
-![SNAP2 board](photos/snap2.jpg)
+![SNAP2 board](photos/Snap2.jpg)
 
-![SNAP2 board with QSFP+extender card](photos/snap2-qsfp.jpg)
+![SNAP2 board with QSFP+extender card](photos/Snap2-qsfp.jpg)
