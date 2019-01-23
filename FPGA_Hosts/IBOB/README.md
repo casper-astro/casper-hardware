@@ -14,7 +14,7 @@ interface to BEE2 boards.
 
 ## History
 
-The [BEE2](../BEE2/BEE2.md) platform provides a significant amount of
+The [BEE2](../BEE2/README.md) platform provides a significant amount of
 processing power with its 5 FPGAs. However, for its primary off-board
 communication it relies on high-speed serial links via its CX4
 connectors. The IBOB was designed as the way to take data from a
@@ -28,7 +28,7 @@ data capture platform.
 
 The successes of the IBOB platform have led to the development of a
 next-generation board based on the Virtex-5 FPGA, the
-[ROACH](../ROACH/ROACH.md) board.
+[ROACH](../ROACH/README.md) board.
 
 ## Description
 
