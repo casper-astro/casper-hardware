@@ -6,15 +6,15 @@
 
 ## Processing Boards
 
-- [IBOB](FPGA_Hosts/IBOB/README.md) (2005 - present | Virtex-II Pro)
-- [BEE2](FPGA_Hosts/BEE2/README.md) (2005 - present | 5x Virtex-II Pro)
-- [ROACH](FPGA_Hosts/ROACH/README.md) (2009 - present | Virtex 5 SXT95/LXT110/LXT155)
+- [IBOB](FPGA_Hosts/IBOB/README.md) (2005 | Virtex-II Pro)
+- [BEE2](FPGA_Hosts/BEE2/README.md) (2005 | 5x Virtex-II Pro)
+- [ROACH](FPGA_Hosts/ROACH/README.md) (2009 | Virtex 5 SXT95/LXT110/LXT155)
 - [ROACH2](FPGA_Hosts/ROACH2/README.md) (2010 | Virtex 6)
 - [ROACH-2 Revision 2](FPGA_Hosts/ROACH-2_Revision_2) (2012 | Virtex6)
 - [SNAP](FPGA_Hosts/SNAP/README.md) (2014 | Kintex7, 12x250 Msps, 6x500 Msps, 3x1 Gsps): 
   3 x HMCAD1511 ADC's, Kintex7 FPGA, and SFP+ 10Gbe
-- [SNAP2](FPGA_Hosts/SNAP2/README.md) (2017) | Kintex Ultrascale)
-- [SKARAB](FPGA_Hosts/SKARAB/README.md) (2017) | Virtex 7)
+- [SNAP2](FPGA_Hosts/SNAP2/README.md) (2017 | Kintex Ultrascale)
+- [SKARAB](FPGA_Hosts/SKARAB/README.md) (2017 | Virtex 7)
 
 ## Mezzanine Boards
 
