@@ -47,7 +47,7 @@
   *(now Texas Instruments)* ADC08D1520 ADC, RF Front-End
 - [ADC1x5000-8](ADC1x5000-8) (2010-present | Single 5.0 or dual 2.5 GS/s, 4/8 bit versions)
 - [Next Generation Samplers](Next_Generation_Samplers) (2011+ | \>3GSPS)
-- [ADC16x250-8](ADC16x250-8) (Q2 2012 - present): 
+- [ADC16x250-8](Mezzanine_Boards/ADCs/ADC16x250-8/README.md) (Q2 2012 - present): 
   16,8,4 inputs 8 bits 250,500,1000 MSPS, Hittite HMCAD1511, various input formats
 - [ADC1x10000-4](ADC1x10000-4) (2012-2016.9 | Single 10.0 GS/s, 4 bit versions):
 We have couple of boards available, if interested, please email:homin@asiaa.sinica.edu.tw, all information is:
@@ -69,9 +69,9 @@ We have couple of boards available, if interested, please email:homin@asiaa.sini
 - [Inexpensive Synthesizer Boards](Supporting_Equipment/Inexpensive_Synthesizer_Boards.md)
 - [Expensive Synthesizers](Supporting_Equipment/Expensive_Synthesizers.md)
 - [CASPER Z-DOK Compatibility](Supporting_Equipment/CASPER_Z-DOK_Compatibility.md)
-- [JTAG repeater](Supporting_Equipment/JTAG_repeater/README.md)
+- [JTAG repeater](Supporting_Equipment/JTAG_Repeater/README.md)
 - [16 way 1PPS driver](Supporting_Equipment/16_way_1PPS_driver/README.md)
-- [SMA to Vport adapter](Supporting_Equipment/SMA_to_Vport_adapter/REA.md)
+- [SMA to Vport adapter](Supporting_Equipment/SMA_to_Vport_adapter/README.md)
 - [SMA to RJ45 adapter](Supporting_Equipment/SMA_to_RJ45_adapter/README.md)
 - [noise sources](Supporting_Equipment/noise_sources/README.md)
 - [32 Way Splitter Clock Distribution](Supporting_Equipment/Splitter_clock_distribution_32way_.pdf)
