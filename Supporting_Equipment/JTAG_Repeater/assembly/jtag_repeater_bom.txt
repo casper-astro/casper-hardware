@@ -1,0 +1,45 @@
+Bill of Material for Jtag_Repeater
+2011jul28
+
+Qty  Components               Comment                          
+------------------------------------------------------------------------------
+ 1    C1                       220 uF 6.3V  0.1 or 0.2" pitch radial tantalum 
+ 1    C2                         0.01 uF  0.1" pitch radial 
+ 1    C3                         1 uf     0.1" pitch radial
+ 2    C4, C6                     0.01 uF  0.1" pitch radial
+ 8    C5,C7 thru C13             0.1 uF   0.1" pitch radial
+
+ 1    D1                       1N4001 axial diode
+
+ 1    F1                       FUSE, 0.4"  32 awg copper wire
+
+ 2    J10, J12                 testpoints. 5X2  0.1" .025" square pins pitch header
+                               FCI Bergstik 54102-T32-05.  OK to leave unpopulated.
+
+ 2    J11, J13                 signal path jumpers. 5X2  0.1" .025" square pins pitch header
+                               FCI Bergstik 54102-T32-05
+ 8    not in schematics        0.1" pitch 2 pin shunt for J11,J13.  Kobiconn 151-8000
+                               may not need all 8.
+ 1    not in schematics        ~4" long 24 awg insulated jumper w/ socket terminals 
+                               for 0.025" square pins at both ends for using the 
+                               JTAG Repeater with only a few JTAG devices
+
+ 9    J1 thru J9               2.5mm header 9x1    JST Sales America  B9B-EH-A(LF)(SN)
+
+26    R1-R9, R11-R14, R16-19   1% 30 ohm 1/8 watt axial 
+          R21-R25, R32-R36
+
+ 2    R26, R37                 5% 4.7 kohm 1/8 watt axial
+10    R27-R31, R38-R42         1% 294 ohm 1/8 watt axial
+ 4    R5, R10, R15, R20        Not populated for short programmer to JTAG Repeater cables.
+
+ 4    U1, U2, U3, U4           SN74AC244N 8bit buffer driver 20pin DIP
+
+ 2    not in schematics        test point pc mini .040"d black for ground.  Keystone 5001K
+
+ 1    not in schematics        2U tall rack panel Bud Industries p/n:  PA-1102-MG
+                               drill and counter sink the mounting holes at locations 
+                               in the mechanical drawing.
+ 7    not in schematics        0.125" long, round, 0.25" dia, swaged, #4-40 
+                               threaded standoffs for 1/16" panel.  Keystone 1560A
+ 7    not in schematics        0.25" long #4-40 philips head screw

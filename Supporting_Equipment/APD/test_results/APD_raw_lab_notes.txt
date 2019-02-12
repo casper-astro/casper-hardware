@@ -1,0 +1,95 @@
+2013oct18  S/N 001
+very first power on tests
+
+using the arbitrarily selected Vin 78.3 VDC :
+
+Vout max = 77.6 VDC
+
+after 1 360 deg clockwise turn of the fine pot : 76.6 VDC
+or 1 Volt/turn of the fine pot
+
+after 1 360 deg clockwise turn of the coarse pot : 71.5 VDC
+or 5.1 Volts/turn of the coarse pot
+
+after many 360 deg clockwise turns of the coarse pot : Vout min = 25.03 VDC
+
+turn coarse pot counter clockwise so that Vout = 77.6 VDC = Vout max
+after many clockwise turns of the fine pot : Vout (partial min) = 64.1 VDC
+
+I think it's ready for the next round of testing.
+
+
+-----------------------------------------------------------------------------
+2013oct25 S/N 001
+2nd day of lab tests
+
+here's some more test data:
+
+Vin = 78.2 V (from PSU1 set point 28.4 + PSU2 set point 49.8)
+78.2 V is verified with Fluke 77 DVM
+
+the coarse and fine trim pots are adjusted so that
+Vout = 77.4 V = Vout max
+
+W/ no load the APD takes approximately 30 seconds before the Vout
+to fully drop to 0V.  See fut her details below.
+
+with a Mastech M9803R multimeter in 4 mA scale :
+1) with 78.2 V directly across a 2.232e6 ohm 1% resistor.
+   theory says 35 uA
+   Mastech reports: 42 uA
+   close enough.
+
+2) with APD loaded by a 2.232e6 ohm resistor
+   Vout = 30.43 V
+   I = 16 uA
+
+3) with APD loaded by a 1e6 ohm resistor
+   Vout = 16.72 V
+   I = 17 uA
+
+4) with APD loaded by a 0 ohm direct short
+   Vout = 0.002 V
+   I = 19 uA
+
+   when remove Vin it takes about 18 seconds for Iout
+   to drop to 0.
+   then Iout pops up to ~ 13 uA and immediately starts to
+   drop down towards 0 uA.
+   By 33 seconds Iout is and stays at 0 uA.
+
+
+*** Note: 
+1) still have not tested the stability
+2) have not tested with C10 installed on the 10V ref trim pin
+
+-----------------------------------------------------------------------------
+2014jan23  S/N 002
+very quick and dirty check out
+it matches S/N 001.
+
+Same values for the Vout min and Vout max and Iout max.
+
+Same values for the time for Vout and I out to decay to
+zero after the power is shut off.
+
+Same changes in Vout for each rotation of the fine and coarse
+trim pots.
+
+S/N 002 is approved for the next round of testing.
+
+
+-----------------------------------------------------------------------------
+2014jan23  S/N 003
+very quick and dirty check out
+it matches S/N 001 (and S/N 002).
+
+Same values for the Vout min and Vout max and Iout max.
+
+Same values for the time for Vout and I out to decay to
+zero after the power is shut off.
+
+Same changes in Vout for each rotation of the fine and coarse
+trim pots.
+
+S/N 003 is approved for the next round of testing.
