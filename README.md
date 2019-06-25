@@ -14,6 +14,7 @@
   3 x HMCAD1511 ADC's, Kintex7 FPGA, and SFP+ 10Gbe
 - [SNAP2](FPGA_Hosts/SNAP2/README.md) (2017 | Kintex Ultrascale)
 - [SKARAB](FPGA_Hosts/SKARAB/README.md) (2017 | Virtex 7)
+- [Red Pitaya](FPGA_Hosts/RED_PITAYA/README.md) (2019 | Zynq 7000)
 
 ## Mezzanine Boards
 
