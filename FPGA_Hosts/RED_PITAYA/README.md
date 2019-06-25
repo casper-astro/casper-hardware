@@ -48,6 +48,7 @@ The Red Pitaya features a XC7Z010-1CL400C Zynq device. See the [Xilinx Zynq Prod
 **ADC**
 
 125-10: 10 bit, 125MSPS/105MSPS, Analog Devices, AD9608, 1.8V Dual Analog-to-Digital Converter
+
 125-14: 14 bit, 125MSPS/105MSPS, Linear Technology, LTC2145-14, 1.8V Dual Analog-to-Digital Converter 
 
 NB: The Zynq pinouts are different between the two versions.
@@ -59,6 +60,7 @@ The ADC Data sheets and board schematics are available under:
 **DAC**
 
 125-10: 10 bit, 125MSPS, Analog Devices, AD9767, 3.3V Interleaved Digital-to-Analog Converter
+
 125-14: 14 bit, 125MSPS, IDT, DAC1401D125, 3.3V Interleaved Digital-to-Analog Converter 
 
 NB: The Zynq pinouts are different between the two versions.
@@ -73,6 +75,7 @@ NB: channel 2 is unconnected on the schematics and DAC operates in interleaved m
 **RAM**
 
 125-10: 2Gb (256MB)
+
 125-14: 4Gb (512Mb)
 
 This interfaces entirely with the programmable software of the Zynq (PS).
@@ -81,17 +84,20 @@ This interfaces entirely with the programmable software of the Zynq (PS).
 **Ethernet**
 
 125-10: 1Gbps and WiFi
+
 125-14: 1Gbps and WiFi
 
 
 **USB**
 
 125-10: USB 2.0
+
 125-14: USB 2.0
 
 **External I/O**
 
 125-10: I2C, SPI, UART, power micro USB
+
 125-14: I2C, SPI, UART, power micro USB, external ADC clock, Daisy Chain connector
 
 For detailed I/O specifications:
