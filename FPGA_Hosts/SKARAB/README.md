@@ -93,15 +93,15 @@ The SKARAB hardware is in full production.
 A Github repository is used to host all the SKARAB design and toolflow
 files. The repo structure is as follows:
 
-1\) <https://github.com/ska-sa/mlib_devel> (master branch). This
+1\) [mlib_devel](https://github.com/ska-sa/mlib_devel) (master branch). This
 contains the JASPER toolflow - Simulink, Matlab and Python scripts to
 generate the fpg file from the Simulink model.
 
-2\) <https://github.com/ska-sa/casperfpga> (master branch). This
+2\) [casperfpga](https://github.com/ska-sa/casperfpga) (master branch). This
 represents our comms interface to the SKARAB via the microblaze - Python
 scripts.
 
-3\) <https://github.com/ska-sa/skarab_bsp_images> (master branch). This
+3\) [skarab_bsp_images](https://github.com/ska-sa/skarab_bsp_images) (master branch). This
 represents the latest SKA-SA board support package (BSP). It has been
 built on top of the original Peralex BSP package, but modified to
 support our requirements. The latest SKA-SA BSP is sitting at version
@@ -120,7 +120,7 @@ and the JTAG (you will not need this during normal operation). The
 \*.ufp image is used to configure the SPARTAN device on the SKARAB (you
 will not need this during normal operation).
 
-4\) <https://github.com/ska-sa/skarab_microblaze_software> (master
+4\) [skarab_microblaze_software](https://github.com/ska-sa/skarab_microblaze_software) (master
 branch). This repo contains the source code of the microblaze. All you
 need to do is run the makefile to generate the elf file, if you decide
 to make new changes to the source. There is a readme.txt file that
@@ -132,8 +132,7 @@ EMB123701U1R1.elf link by typing in "ln -s \<new\_elf\_name.elf\>
 EMB123701U1R1.elf (remember to delete the old link first). You are now
 ready to use the JASPER toolflow with the new elf file.
 
-5\) <https://github.com/ska-sa/skarab_docs> (master branch). This repo
-contains all the how to, install and manual documents for the SKARAB.
+5\) [This repo](https://github.com/casper-astro/casper-hardware/tree/master/FPGA_Hosts/SKARAB) contains all the how-to, install and manual documents for the SKARAB.
 
 ### Schematics and Design Files
 
