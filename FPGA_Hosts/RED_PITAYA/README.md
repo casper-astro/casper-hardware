@@ -118,9 +118,9 @@ Acrylic and Aluminium case available for Red Pitaya. Check out:
 
 ## Toolflow
 
-The CASPER toolflow supports the 125-10 at the moment. The Red Pitaya Toolflow is available under:
+The CASPER toolflow supports the 125-10 and 125-14 at the moment. The Red Pitaya Toolflow is available under:
 
-[Red Pitaya Toolflow](https://github.com/ska-sa/mlib_devel/tree/red_pitaya)
+[Red Pitaya Toolflow](https://github.com/casper-astro/mlib_devel/tree/casper-astro-soak-test)
 
 There are tutorials on the Red Pitaya under:
 
