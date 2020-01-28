@@ -43,3 +43,5 @@ For more information on chipsets, see [the SNAP documentation repository](https:
 
 ## Chassis
 For use in HERA, an RFI-tight SNAP chassis, based on a Compac enclosure has been developed. See [here](https://github.com/casper-astro/casper-hardware/tree/master/FPGA_Hosts/SNAP/enclosure) for details.
+
+A 1U chassis for a single board has also been delevoped. Details are available [here](https://github.com/casper-astro/publications/blob/master/Memos/files/1U-Snap-Enclosure-Pollak.pdf). A full set of design files can be obtained [here](https://entangled.physics.ox.ac.uk/index.php/s/UEpbuej0WEO3riC). 
