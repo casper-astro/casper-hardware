@@ -5,7 +5,7 @@
 SKARAB is an agile, networked, FPGA-centric cluster computing or
 instrument node. The Square Kilometre Array Reconfigurable Application
 Board (SKARAB) is the latest generation of CASPER FPGA hardware. It is
-the next generation/successor to the [ROACH2](../ROACH2/ROACH2.md)
+the next generation/successor to the [ROACH2](../ROACH2/README.md)
 platform. Unlike previous CASPER platforms, the SKARAB was designed by
 the South African company, Peralex, according to the specifications of
 SKA-SA. SKARAB can be purchased from Cyntony Corporation (USA) outside
@@ -84,6 +84,8 @@ The current block diagram is shown below:
 
 ![center|upright=2.0|SKARAB Block Diagram](block_diagrams/SKARAB_bd_2.png)
 
+MeerKAT does not use the SKARAB ADC, as all the sample is done at the line-feed and instead this is populated with another HMC module.
+
 ## Project Status
 
 The SKARAB hardware is in full production.
@@ -93,27 +95,27 @@ The SKARAB hardware is in full production.
 A Github repository is used to host all the SKARAB design and toolflow
 files. The repo structure is as follows:
 
-1\) [mlib_devel](https://github.com/ska-sa/mlib_devel) (master branch). This
+1\) [mlib_devel](https://github.com/ska-sa/mlib_devel) (devel/master branch). This
 contains the JASPER toolflow - Simulink, Matlab and Python scripts to
 generate the fpg file from the Simulink model.
 
-2\) [casperfpga](https://github.com/ska-sa/casperfpga) (master branch). This
+2\) [casperfpga](https://github.com/ska-sa/casperfpga) (devel/master branch). This
 represents our comms interface to the SKARAB via the microblaze - Python
 scripts.
 
 3\) [skarab_bsp_images](https://github.com/ska-sa/skarab_bsp_images) (master branch). This
 represents the latest SKA-SA board support package (BSP). It has been
 built on top of the original Peralex BSP package, but modified to
-support our requirements. The latest SKA-SA BSP is sitting at version
-2.3. There are two images that need to be configured for each SKARAB:
-Multiboot image (frm123701u1r1\_mez3\_ska\_sa.hex or \*.bin) and the
-Golden Image (frm123701u1r1\_mez3\_golden\_ska\_sa.hex or \*.bin). The
+support our requirements. The latest SKA-SA BSP is sitting at the following versions:
+FPGA=3.1, FPGA SOC=2.8, uBlaze = 3.20.331. There are two images that need to be configured for each SKARAB:
+Multiboot image (skarab\_fgbe\_1gbe\_XXXX-XX-XX_XXXX\_multiboot.hex or \*.bin) and the
+Golden Image (skarab\_fgbe\_1gbe\_XXXX-XX-XX_XXXX\_golden.hex or \*.bin). The
 SKARAB always boots up with the Multiboot image and if there is an issue
 with the programming of the toolflow image or Multiboot image then the
 board will boot with the Golden image (default safe image). The
 Multiboot and Golden Image are identical, except for the boot
 parameters. The Golden Image is loaded into the FPGA at a lower clock
-frequency to ensure the board boots. The casperfpga repo wiki explains
+frequency to ensure the board boots. The casperfpga ReadtheDocs explains
 how to configure the board. There are also other programming files in
 the repo. The \*.mcs is used to configure the flash device using Vivado
 and the JTAG (you will not need this during normal operation). The
@@ -126,7 +128,7 @@ need to do is run the makefile to generate the elf file, if you decide
 to make new changes to the source. There is a readme.txt file that
 explains a bit more. The elf file that will be generated needs to be
 copied to the
-"ska-sa/mlib\_devel/jasper\_library/hdl\_sources/forty\_gbe/cont\_microblaze"
+"ska-sa/mlib\_devel/jasper\_library/hdl\_sources/skarab\_infr/cont\_microblaze"
 folder. Once this is done you will need to link this file to the
 EMB123701U1R1.elf link by typing in "ln -s \<new\_elf\_name.elf\>
 EMB123701U1R1.elf (remember to delete the old link first). You are now
@@ -146,7 +148,7 @@ and design files [Peralex email](mailto:peralex-information@peralex.com)
 
 In order to meet the new F-engine and X-engine requirements for the
 MeerKAT radio telescope new hardware is required. The SKARAB has been
-designed to replace the [ROACH2](../ROACH2/ROACH2.md) hardware, which is
+designed to replace the [ROACH2](../ROACH2/README.md) hardware, which is
 legacy hardware by providing these new requirements. In particular, the
 following critical requirements have been addressed:
 
@@ -165,16 +167,14 @@ following critical requirements have been addressed:
 All documentation related to the SKARAB design can be found under the
 following repo:
 
-<https://github.com/ska-sa/skarab_docs> (master branch)
+<https://github.com/casper-astro/casper-hardware/tree/master/FPGA_Hosts/SKARAB/docs>
 
 Refer to the "peralex" folder for a good description of the SKARAB
 hardware and firmware design. This should be read in conjunction with
-the casperfpga wiki (to be deprecated) and ReadtheDocs, which is located
+the casperfpga ReadtheDocs documentation, which is located
 at:
 
-<https://github.com/ska-sa/casperfpga/wiki>
-
-<https://casper-toolflow.readthedocs.io/en/latest/>
+<https://casper-toolflow.readthedocs.io/projects/casperfpga/en/latest/>
 
 ## Mezzanine Cards
 
@@ -191,13 +191,13 @@ The Quad Small Form Pluggable (QSFP+) Mezzanine Card provides the SKARAB
 with 40GbE functionality. It consists of 4 x 40GbE QSFP+ ports and the
 QSFP+ Mezzanine Card can be placed in any mezzanine slot, but CASPER
 readers should be aware that the toolflow only supports mezzanine slot 3
-at the moment. This will be addressed in the future. The board is
+at the moment. This may be addressed in the future. The board is
 designed and manufactured by Peralex.
 
 More information on the QSFP+ Mezzanine Card can be found under the
 following repo (in the "peralex" folder):
 
-<https://github.com/ska-sa/skarab_docs> (master branch)
+<https://github.com/casper-astro/casper-hardware/tree/master/FPGA_Hosts/SKARAB/docs>
 
 ### ADC Mezzanine Card
 
@@ -211,7 +211,7 @@ manufactured by Peralex.
 More information on the ADC Mezzanine Card can be found under the
 following repo (in the "peralex" folder):
 
-<https://github.com/ska-sa/skarab_docs> (master branch)
+<https://github.com/casper-astro/casper-hardware/tree/master/FPGA_Hosts/SKARAB/docs>
 
 ### HMC Mezzanine Card
 
@@ -231,7 +231,7 @@ stack device which is now obsolete.
 More information on the HMC Mezzanine Card can be found under the
 following repo (in the "peralex" folder):
 
-<https://github.com/ska-sa/skarab_docs> (master branch)
+<https://github.com/casper-astro/casper-hardware/tree/master/FPGA_Hosts/SKARAB/docs>
 
 ### Schematics and Design Files
 
@@ -264,6 +264,8 @@ SKA-SA and includes:
 1\) 1 Gb Ethernet core (for health monitoring, control)
 
   - MAC only (external PHY)
+  
+  **NB**: There are two versions: a) CASPER friendly, which supports 1GbE and 40GbE and b) MeerKAT friendly, which supports 40GbE only. 
 
 2\) 40 Gb Ethernet core (high speed data and health monitoring, control)
 
@@ -278,42 +280,49 @@ SKA-SA and includes:
 
 4\) Management microcontroller
 
-  - MicroBlaze uC with Wishbone peripheral bus  
-  - 1-Wire Configuration PROM access  
-  - Voltage/current monitors (12 rails)  
-  - Fan control/status  
-  - High speed network-based FPGA boot  
+  - MicroBlaze uC with Wishbone peripheral bus 
+
+  - 1-Wire Configuration PROM access 
+
+  - Voltage/current monitors (12 rails) 
+
+  - Fan control/status 
+
+  - High speed network-based FPGA boot 
+
   - Network setup/management for 1 GbE and 40 GbE interfaces (PING,
-    DHCP,etc)  
+    DHCP,etc) 
+
 
 The latest SKARAB BSP images can be found under the following repo:
 
 <https://github.com/ska-sa/skarab_bsp_images> (master branch).
 
 **NB**: The HMC is a yellow block within the toolflow, but is not part
-of the SKARAB BSP. The SKARAB BSP is currently integrated as part of the
-40GbE yellow block, so if you want to target the SKARAB the reader will
-need to use the 40GbE yellow block. The possibility of extracting the
-BSP from the 40GbE yellow block will be addressed in the future.
+of the SKARAB BSP.
 
 ## ToolFlow
 
-The SKARAB toolflow currently uses Matlab R2016b, Xilinx Vivado 2016.2
-and Ubuntu 14.04 LTS. It has not been tested on any other versions and
+The SKARAB toolflow currently uses Matlab R2018a, Xilinx Vivado 2019.1.1
+and Ubuntu 14.04 LTS/16.04 LTS. It has not been tested on any other versions and
 hence, the results cannot be guaranteed when using different software
 versions than those specified here.
 
-The toolflow can be found under the following repo:
+The toolflow can be found under the following repos - SKA and CASPER:
 
-<https://github.com/ska-sa/mlib_devel> (master branch)
+<https://github.com/ska-sa/mlib_devel> (SKA master branch)
 
-Refer to the above repo wiki for how to run the JASPER toolflow.
+<https://github.com/casper-astro/mlib_devel> (CASPER master branch)
+
+
+Refer to the ReadtheDocs link below for how to run the JASPER toolflow.
+
+<https://casper-toolflow.readthedocs.io/en/latest/src/Running-the-Toolflow.html>
 
 You can find documentation on how to install Matlab and Xilinx Vivado
-under the following
-wiki:
+under the following ReadtheDocs link:
 
-<https://github.com/casper-astro/mlib_devel/wiki/How-to-install-Software>
+<https://casper-toolflow.readthedocs.io/en/latest/>
 
 ### SKARAB hardware configurations available
 
@@ -325,21 +334,17 @@ The following configurations are supported by the toolflow:
 
 ![Toolflow Supported Architecture B](block_diagrams/skarab-toolflow-supported-architecture-adc-1-40gbe-link.png)
 
-The 40GbE yellow block only supports a single Tx/Rx link (port 0) and can only be fitted to Mez3 – firmware limitation due to SKA-SA BSP being integrated with 40GbE yellow block (work is being done to support multiple ports). The HMC and ADC Mezzanine cards can be placed on Mez0, Mez1, Mez2, but not Mez3.
+![Toolflow Supported Architecture C](block_diagrams/skarab-toolflow-non-supported-architecture.png)
+
+The 40GbE Mezzanine Card can only be fitted to Mez3. The HMC and ADC Mezzanine cards can be placed on Mez0, Mez1, Mez2, but not Mez3.
 
 #### Non-Toolflow supported hardware configurations:
 
-The following configuration is not supported by the toolflow:
+The configurations listed below are not supported by the toolflow and SKA-SA BSP at this stage. 
+However, the hardware can support the following configurations of Mezzanine Cards (not shown above):
 
-![Non-Toolflow Supported Architecture](block_diagrams/skarab-toolflow-non-supported-architecture.png)
-
-This configuration and those listed below are not supported by the toolflow and SKA-SA BSP at this stage. 
-
-The hardware can support the following configurations of Mezzanine Cards (not shown above):
-
-1) 40GbE Mezzanine Cards (4 ports) x 4 
-2) HMC Mezzanine Cards, 4GB, 2 link x 4
-3) ADC Mezzanine Cards, 3GSPS, 14 bits, JESD204B, 4 channels x 4
+1) HMC Mezzanine Cards, 4GB, 2 link x 4
+2) ADC Mezzanine Cards, 3GSPS, 14 bits, JESD204B, 4 channels x 4
 
 ## FPGA Configuration
 
@@ -388,7 +393,7 @@ between the microblaze and the wishbone programming FIFO.
 All documentation related to the SKARAB can be found under the following
 repo:
 
-<https://github.com/ska-sa/skarab_docs> (master branch)
+<https://github.com/casper-astro/casper-hardware/tree/master/FPGA_Hosts/SKARAB/docs>
 
 Refer to the "peralex" folder for a good description of the SKARAB
 technical specs
@@ -462,6 +467,6 @@ static IP assignment, but this is not transparently supported in current
 JASPER tools and libraries.  Covered in detail by Wesley New and
 Clifford van Dyk in this very email thread.
 
-10\) The Jumbo packets issue also arose on the 40 GIgE network.  When
+10\) The Jumbo packets issue also arose on the 40 GigE network.  When
 trying to send data over 40 GbE from a SKARAB, through the switch, and
 into a server, the MTU size had to be set to 9000.
