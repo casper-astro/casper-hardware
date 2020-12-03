@@ -84,7 +84,7 @@ The current block diagram is shown below:
 
 ![center|upright=2.0|SKARAB Block Diagram](block_diagrams/SKARAB_bd_2.png)
 
-MeerKAT does not use the SKARAB ADC, as all the sample is done at the line-feed and instead this is populated with another HMC module.
+MeerKAT does not use the SKARAB ADC, as all the sampling is done at the line-feed and instead this is populated with another HMC module.
 
 ## Project Status
 
