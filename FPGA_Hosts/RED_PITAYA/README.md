@@ -76,7 +76,7 @@ NB: channel 2 is unconnected on the schematics and DAC operates in interleaved m
 
 125-10: 2Gb (256MB)
 
-125-14: 4Gb (512Mb)
+125-14: 4Gb (512MB)
 
 This interfaces entirely with the programmable software of the Zynq (PS).
 
